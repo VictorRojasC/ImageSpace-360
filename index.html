@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 360 - Proyecto Victor</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    
+    <style>
+        * { margin: 0; padding: 0; }
+        #viewer {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="viewer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+
+    <script>
+        const viewer = new PhotoSphereViewer.Viewer({
+            container: document.querySelector('#viewer'),
+            // NOTA: He cambiado tu enlace al formato "raw" para que sea accesible
+            panorama: 'https://raw.githubusercontent.com/VictorRojasC/ImageSpace-360/main/360-1.jpg',
+            caption: 'Espacio 360 - <b>Victor Rojas</b>',
+            loadingImg: 'https://photo-sphere-viewer.js.org/assets/loader.gif',
+            touchmoveTwoFingers: true,
+            mousewheel: true,
+            defaultZoomLvl: 50
+        });
+    </script>
+
+</body>
+</html>
